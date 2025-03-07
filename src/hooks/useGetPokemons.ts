@@ -2,14 +2,17 @@ import { useMemo } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-export type Pokemon = {
+export type TypePokemon = {
   id: string;
   name: string;
+  number: string;
+  image: string;
+  types: string[];
 };
 
 export type PokemonOption = {
-  value: Pokemon['id'];
-  label: Pokemon['name'];
+  value: TypePokemon['id'];
+  label: TypePokemon['name'];
 };
 
 export const GET_POKEMONS = gql`
@@ -17,6 +20,9 @@ export const GET_POKEMONS = gql`
     pokemons(first: $first) {
       id
       name
+      number
+      image
+      types
     }
   }
 `;
@@ -28,10 +34,10 @@ export const useGetPokemons = () => {
     },
   });
 
-  const pokemons: Pokemon[] = useMemo(() => data?.pokemons || [], [data]);
+  const pokemons: TypePokemon[] = useMemo(() => data?.pokemons || [], [data]);
 
   const pokemonOptions: PokemonOption[] = useMemo(
-    () => pokemons.map((p: Pokemon) => ({ value: p.id, label: p.name })),
+    () => pokemons.map((p: TypePokemon) => ({ value: p.id, label: p.name })),
     [pokemons]
   );
 
