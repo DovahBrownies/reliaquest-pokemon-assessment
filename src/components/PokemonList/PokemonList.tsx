@@ -152,6 +152,7 @@ export const PokemonList = () => {
         label="Can't find'em all?"
         placeholder="Search for a Pokémon"
         onChange={handleSearchPokemon}
+        inputDebounce={300}
       />
       <div className={classes.pokemonContainer}>
         {filteredPokemons.map((pkmn) => (
