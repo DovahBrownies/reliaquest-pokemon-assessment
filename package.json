@@ -42,5 +42,8 @@
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "react-scripts": "4.0.3"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
