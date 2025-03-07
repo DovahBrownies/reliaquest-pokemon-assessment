@@ -1,6 +1,7 @@
 const styles = {
 	wrapper: {
 		display: 'inline-flex',
+		justifyContent: 'center',
 		flexDirection: 'column',
 		fontSize: '1.25rem',
 		maxWidth: '100%',

@@ -115,7 +115,6 @@ export const PokemonList = () => {
   const { pokemons, loading } = useGetPokemons();
   const [searchValue, setSearchValue] = useState('');
   const { isOpen, openModal, closeModal } = useModal();
-  console.log("[ 🤔 Debug ] | PokemonList | params:", params)
 
   const handleClickOutOfPokemon = () => {
     navigate('/pokemon');
