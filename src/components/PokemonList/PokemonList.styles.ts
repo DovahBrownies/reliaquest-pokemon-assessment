@@ -69,6 +69,9 @@ const styles = {
     '& > small, & > p': {
       color: 'black',
     },
+		'@media (max-width: 1024px)': {
+			maxWidth: '75%',
+    },
 		'&:hover': {
 			transform: 'rotate(5deg) scale(1.1)',
 		},
@@ -82,6 +85,33 @@ const styles = {
 			marginLeft: '0.25rem',
 		},
 	},
+	pokemonDetailsContainer: {
+		display: 'flex',
+    flexDirection: 'column',
+		alignItems: 'center',
+		'& > :first-child': {
+			marginRight: '0.5rem',
+		},
+		'@media (min-width: 1024px)': {
+			flexDirection: 'row',
+    },
+		'@media (max-width: 1024px)': {
+			fontSize: '0.75rem',
+    },
+	},
+	pokemonDetails: {
+		display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'baseline',
+    backgroundColor: 'white',
+    borderRadius: '0.5rem',
+		padding: '0.1rem 1rem',
+		'& *': {
+			color: 'black',
+			margin: '0.5em 0 0.5rem 0',
+		},
+	}
 };
 
 export default styles;
