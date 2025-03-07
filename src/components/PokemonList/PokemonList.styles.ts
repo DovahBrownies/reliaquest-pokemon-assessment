@@ -96,7 +96,7 @@ const styles = {
 			flexDirection: 'row',
     },
 		'@media (max-width: 1024px)': {
-			fontSize: '0.75rem',
+			fontSize: '0.85rem',
     },
 	},
 	pokemonDetails: {
@@ -109,7 +109,10 @@ const styles = {
 		padding: '0.1rem 1rem',
 		'& *': {
 			color: 'black',
-			margin: '0.5em 0 0.5rem 0',
+			margin: '0.5rem 0 0.5rem 0',
+			'@media (max-width: 1024px)': {
+				margin: '0.25rem 0 0.25rem 0',
+			},
 		},
 	}
 };

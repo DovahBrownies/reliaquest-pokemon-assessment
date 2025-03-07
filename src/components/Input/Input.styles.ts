@@ -16,6 +16,9 @@ const styles = {
 		borderColor: 'rgba(255, 255, 255, 0.45)',
 		borderRadius: '0.85rem',
 		padding: '0 0.5rem',
+		'@media (max-width: 1024px)': {
+			fontSize: '1.25rem',
+    },
 		'&:focus': {
 			borderColor: 'rgba(255, 255, 255, 1)',
 		},
